@@ -12,11 +12,7 @@ public class Participante extends Pessoa {
 	}
 
 	public Participante(String endereco, String telefone, String cpf, String email, String nome) {
-<<<<<<< HEAD
 		super(nome);
-=======
-		super.setNome(nome);
->>>>>>> 309816c02c7e946e42f0026ad0f3c7c3054fbabd
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.cpf = cpf;

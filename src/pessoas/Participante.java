@@ -12,12 +12,12 @@ public class Participante extends Pessoa {
 	}
 
 	public Participante(String endereco, String telefone, String cpf, String email, String nome) {
-		super();
+		super(nome);
 		this.endereco = endereco;
 		this.telefone = telefone;
 		this.cpf = cpf;
 		this.email = email;
-		setNome(nome);
+		
 	}
 
 	public String getEndereco() {
@@ -54,8 +54,11 @@ public class Participante extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "\nNome: " + getNome() + "\nEndereco: " + endereco + "\nTelefone: " + telefone + "\nCPF: " + cpf
+		return  super.toString() + "\nEndereco: " + endereco + "\nTelefone: " + telefone + "\nCPF: " + cpf
 				+ "\nEmail: " + email + "\n";
 	}
 
 }
+
+
+

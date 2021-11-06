@@ -4,20 +4,14 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-import controle.Comando;
-import controle.ListaEventos;
 import eventos.Evento;
 import util.Situacao;
 
-public class PesquisarEventoSitu implements Comando {
-	ArrayList<Evento> listaEventos = ListaEventos.getInstance().getListaEventos();
+public class PesquisarEventoSitu {
 
-	public PesquisarEventoSitu() {
-	}
-
-	public void pesquisarEventoSitu() {
+	public static void pesquisar(ArrayList<Evento> listaEventos) {
 		Situacao situEvento = Situacao.values()[Integer
-				.parseInt(JOptionPane.showInputDialog("Informe a situação do evento:"))];
+				.parseInt(JOptionPane.showInputDialog("Informe a situação do evento:")) - 1];
 		boolean flag = false;
 
 		if (listaEventos.isEmpty())
@@ -32,11 +26,6 @@ public class PesquisarEventoSitu implements Comando {
 			if (!flag)
 				JOptionPane.showMessageDialog(null, "Evento inexistente!");
 		}
-	}
-
-	@Override
-	public void executar() {
-		pesquisarEventoSitu();
 	}
 
 }

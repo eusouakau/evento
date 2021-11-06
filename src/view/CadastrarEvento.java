@@ -9,17 +9,15 @@ import eventos.*;
 import pessoas.Participante;
 import util.Situacao;
 
-public class CadastrarEvento implements Comando {
+public class CadastrarEvento {
 
-	public CadastrarEvento() {
-	}
 
-	public void cadastrar() {
+	public static void cadastrar(ArrayList<Evento> listaEventos) {
 		String nomeEvento = JOptionPane.showInputDialog("Informe o nome do evento: ");
 		double taxaInscricao = Double
 				.parseDouble(JOptionPane.showInputDialog("Informe o valor da taxa de inscrição: "));
 		String data = JOptionPane.showInputDialog("Informe a data do evento: ");
-
+		
 		Situacao situacao = situacao();
 
 		String instituicao = JOptionPane.showInputDialog("Informe o nome da instituição onde ocorrerá o evento: ");
@@ -53,14 +51,9 @@ public class CadastrarEvento implements Comando {
 
 	}
 
-	@Override
-	public void executar() {
-		cadastrar();
-	}
 
 	public static Situacao situacao() {
 		String opcao = "";
-
 		opcao += ("Informe a situação: \n");
 		for (Situacao value : Situacao.values()) {
 			opcao += value.getDescricao() + "\n";

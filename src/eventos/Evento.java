@@ -87,8 +87,12 @@ public class Evento implements Validador {
 
 	@Override
 	public String toString() {
-		return "Evento " + nome + "\nTaxa de Inscricao:" + taxaInscricao + "\nData: " + data + "\nLocal:" + local
-				+ "\nParticipantes: \n" + participantes + "\nSituação: " + situacao;
+		return "\nEvento " + nome + "\nTaxa de Inscricao:" + taxaInscricao + "\nData: " + data + "\nLocal:" + (local!= null? local.toString():"local não encontrado")
+				+ "\nParticipantes: \n" + (participantes!=null?participantes.toString():"participates não encontrados") + "\nSituação: " + situacao;
 	}
 
 }
+
+
+
+

@@ -4,18 +4,11 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-import controle.Comando;
-import controle.ListaEventos;
 import eventos.Evento;
 
-public class PesquisarEventoNome implements Comando {
-	ArrayList<Evento> listaEventos = ListaEventos.getInstance().getListaEventos();
+public class PesquisarEventoNome{
 
-	public PesquisarEventoNome() {
-
-	}
-
-	public void pesquisarEventoNome() {
+	public static void pesquisar(ArrayList<Evento> listaEventos) {
 		String nomeEvento = JOptionPane.showInputDialog("Informe o nome do evento:");
 		boolean flag = false;
 
@@ -33,8 +26,4 @@ public class PesquisarEventoNome implements Comando {
 		}
 	}
 
-	@Override
-	public void executar() {
-		pesquisarEventoNome();
-	}
 }

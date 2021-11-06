@@ -14,23 +14,19 @@ public class MainClass {
 		while (true) {
 			switch (opcao()) {
 			case CADASTRAR_EVENTO: {
-				CadastrarEvento cadastro = new CadastrarEvento();
-				cadastro.executar();
+			    CadastrarEvento.cadastrar(listaEventos.getListaEventos());
 				break;
 			}
 			case PESQUISAR_EVENTO_NOME: {
-				PesquisarEventoNome pesquisaNome = new PesquisarEventoNome();
-				pesquisaNome.executar();
+			    PesquisarEventoNome.pesquisar(listaEventos.getListaEventos());
 				break;
 			}
 			case PESQUISAR_EVENTO_INST: {
-				PesquisarEventoInst pesquisaInst = new PesquisarEventoInst();
-				pesquisaInst.executar();
+			    PesquisarEventoInst.pesquisar(listaEventos.getListaEventos());
 				break;
 			}
 			case PESQUISAR_EVENTO_SITU: {
-				PesquisarEventoSitu pesquisaSitu = new PesquisarEventoSitu();
-				pesquisaSitu.executar();
+				PesquisarEventoSitu.pesquisar(listaEventos.getListaEventos());
 				break;
 			}
 			case SAIR: {

@@ -22,7 +22,7 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa Nome: " + nome;
+		return "\nNome: " + nome;
 	}
 
 }
